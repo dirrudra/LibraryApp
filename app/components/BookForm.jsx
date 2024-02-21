@@ -16,7 +16,7 @@ const BookForm = () => {
     e.preventDefault();
     // You can perform form validation here if needed
     const { data, error } = await supaBase
-      .from('Books')
+      .from('books')
       .insert([{ title, author, subject, publish_date: publishDate }]);
 
     if (error) {
