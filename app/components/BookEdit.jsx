@@ -52,11 +52,9 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://bsitlagwqnrznccgjixz.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzaXRsYWd3cW5yem5jY2dqaXh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDg0ODQ1NDIsImV4cCI6MjAyNDA2MDU0Mn0.rjai8hkHeneSmKR_6dzlItWFCEahBvcYk2NWSLe-w_k';
-const supabase = createClient(supabaseUrl, supabaseKey);
+
+const supabase = require('../../lib/supabase');
 
 const BookEdit = () => {
   const router = useRouter();
